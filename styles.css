@@ -1,0 +1,95 @@
+.sidebar{
+    height: 100%;
+    z-index: 1;
+    width: 300x;
+    background-color:black;
+    top: 0;
+    left: 0;
+    
+    position: fixed;
+    }
+    .sidebar a{
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    color:palevioletred;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    text-align: justify;
+    margin-top: 20px;
+    }
+    
+    .sidebar a:hover{
+    color:grey;
+    }
+    
+    .dropbtn{
+    background-color: hotpink;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    z-index: 1;
+    }
+    .pic { 
+    width: 200px;
+    height: 200px;
+    min-width:100px;
+    min-height:100px;
+    position: relative;
+    }
+    .pic:hover { 
+    z-index: 1;
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    }
+    
+    .dropdown{
+    position: relative;
+    right: 0;
+    }
+    
+    .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color:plum;
+    }
+    
+    .dropdown-content a{
+        text-shadow: purple;
+    color:violet);
+    display: block;
+    }
+    
+    body{
+        margin:0;
+        padding: 0;
+        background: url(pozadina.jpg) no-repeat;
+        background-size: cover;
+    }
+    .box { 
+    width:450px;
+    position: relative;
+    background: pic(0,0,0,0.4);
+    padding:40px;
+    text-align: center;
+    margin:auto;
+    margin-top: 5%;
+    color:aliceblue;
+    font-family: 'Courier New', Courier, sans-serif;
+    }
+    
+    .box p{
+        text-align: justify;
+    
+    }
+    p{
+        text-align: center;
+    }
+    
+    h2{
+        font-family: 'Courier New', Courier, monospace;
+        color:palevioletred;
+        font-size: 35px;
+        text-align: center;
+    }

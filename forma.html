@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "utf-8">
+    <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+<title>Angie's website</title>
+<script >
+ 
+ var zodiac1Image;
+         
+         function start()
+         {
+            var button = document.getElementById( "rollCheck" );
+            button.addEventListener( "click",check , false );
+            zodiac1Image = document.getElementById( "zodiac1" );
+           
+         } 
+
+         function check()
+         {
+            setImage( zodiac1Image );
+        
+         } 
+         function setImage( zodiacImg )
+         {
+            var zodiacValue = Math.floor( 1 + Math.random() * 12 );
+            zodiacImg.setAttribute( "src", "zodiac" + zodiacValue + ".png" );
+            zodiacImg.setAttribute( "alt", 
+               "month with numb" + zodiacValue + " spot(s)" );
+         }
+   
+   
+   window.addEventListener( "load", start, false );
+   function sumbitMe(){
+       window.alert("Successfully submitted!");
+       
+   }
+  
+   
+    var timeOutValue = 100;     
+    var setTimeToHide_ID, mItem;
+
+    function showmenu(obj) {
+        if (mItem) mItem.style.display = 'none';
+
+        mItem = document.getElementById(obj);
+        mItem.style.display = 'block';
+    }
+  
+    function setTimeToHide() { 
+        setTimeToHide_ID = window.setTimeout(HideMenu, timeOutValue); 
+    }
+
+    function HideMenu() { 
+        if (mItem) mItem.style.display = 'none'; 
+    }      
+
+    function ReSetTimer() {
+        if (setTimeToHide_ID) {
+            window.clearTimeout(setTimeToHide_ID);
+            setTimeToHide_ID = 0;
+        }
+    };
+   
+   
+   
+   </script>
+<style type = "text/css">
+.sidebar{
+height: 100%;
+z-index: 1;
+width: 300x;
+background-color:black;
+top: 0;
+left: 0;
+
+position: fixed;
+}
+.sidebar a{
+display: block;
+font-family: 'Courier New', Courier, monospace;
+color:palevioletred;
+padding: 6px 8px 6px 16px;
+text-decoration: none;
+text-align: justify;
+margin-top: 20px;
+}
+
+.sidebar a:hover{
+color:grey;
+}
+
+.dropbtn{
+background-color: hotpink;
+color: white;
+border: none;
+cursor: pointer;
+text-align: center;
+z-index: 1;
+}
+
+.dropdown{
+position: relative;
+right: 0;
+}
+
+.dropdown-content{
+display: none;
+position: absolute;
+background-color:plum;
+}
+
+.dropdown-content a{
+    text-shadow: purple;
+color:violet);
+display: block;
+}
+
+input, select, label, textarea{
+color: palevioletred;
+position:relative;
+text-align:left;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    background: url(pozadina.jpg) no-repeat;
+    background-size: cover;
+}
+.box { 
+width:450px;
+position: relative;
+background: pic;
+padding:40px;
+text-align: center;
+margin:auto;
+margin-top: 5%;
+color:aliceblue;
+font-family: 'Courier New', Courier, sans-serif;
+}
+.box p{
+    text-align: justify;
+
+}
+p{
+    text-align: center;
+}
+
+h2{
+    color:palevioletred;
+    font-size: 35px;
+    font-family:'Courier New', Courier, monospace;
+   text-align: center;
+}
+.forma{
+    margin-right: 45%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    
+} 
+
+    </style>
+</head>
+
+<body>
+   
+    <h2>Visitor's survey</h2>
+    <br>
+    <br>
+ <div class = "sidebar">
+    <a href = "file:///C:/Users/USER/Desktop/oweb_proektna/file.html">Home</a>
+    <div class = "dropdown">
+    <a class = "dropdown-btn" onmouseover="showmenu('divLiCat');" 
+    onmouseout="setTimeToHide()" href = "fave.html">Lifestyle</a>
+    <div class = "dropdown-content" id="divLiCat" onmouseover="ReSetTimer()" 
+    onmouseout="setTimeToHide()">
+    <a href = "fave.html">Music</a>
+    <a href = "fave.html">Movies</a>
+    <a href = "fave.html">Food</a>
+    </div>
+    </div>
+    <a href = "blog.html">Blog</a>
+    <a href = "ph.html">Photo journal</a>
+    
+    <a href = "forma.html">Visitor's survey</a>
+    <a href = "#contact">Contact</a>
+    </div>
+    <div class="forma">
+       
+
+<form method = "post" action = " " autocomplete = "on">
+<input type = "hidden" name = "recipient" value = "angela.taseva@gmail.com">
+<input type = "hidden" name = "subject" value = "Info Form">
+<input type = "hidden" name = "redirect" value = "file.html">
+<p><label>First Name:
+    <br>
+<input type = "text" id = "ime" placeholder = "First Name" required/>
+</label><br></p>
+<br>
+<p><label>Last Name:
+    <br>
+<input type = "text" id = "prezime" placeholder = "Last Name" required/>
+</label>
+</p>
+<br>
+<p><label> Your E-mail:
+    <br>
+<input type = "email" placeholder = "name@domain.com" required />
+</label></p>
+<p style=color:palevioletred;><label>Gender:</label><br><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male__</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+</p> 
+<br>
+<p><label>Your Impression:
+    <br>
+    
+    <select name = "rating">
+    <option selected>Cool</option>
+    <option>10</option>
+    <option>9</option>
+    <option>8</option>
+    <option>7</option>
+    <option>6</option>
+    <option>5</option>
+    <option>4</option>
+    <option>3</option>
+    <option>2</option>
+    <option>1</option>
+    </select>
+    </label></p>
+<br>
+
+        <p><strong>
+           <input type="submit" value="Submit">
+           <input type="reset" value="Clear">
+          
+        </strong></p> 
+       </form>
+    </div>
+
+   <form style="text-align: center;" action = "#">
+        <input id = "rollCheck" type = "button" value = "Check your perfect match for today!"> 
+        <br>
+        <br>
+        <img id = "zodiac1" src = "blank.png" alt = "blank image">
+     </form>
+     
+    <hr>
+    
+<footer id = "contact">
+<p>
+    <a href = "http://www.facebook.com/laalaaa99"><img src = "download.png" width = "65"
+        height = "50" alt = "Links"></a></li>
+    <a href = "http://www.instagram.com/erikaarr86"><img src = "download1.png" width = "65"
+        height = "50" alt = "Links"></a></li>
+    <a href = "mailto:angela.taseva@gmail.com"><img src = "download2.png" width = "65"
+        height = "50" alt = "Links"/></a></li>
+   
+    </p>
+</footer>
+</body>
+</html>
