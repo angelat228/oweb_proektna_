@@ -50,15 +50,18 @@ var check;
         localStorage.setItem(check, num1);
     }
 
-    
+    var name;
     var comm;
     var s_comm;
     var num2;
     var id;
 
     function add_funk1(clicked_id) {
-
-        comm = window.prompt("Add comment!");
+         
+        
+        name = window.prompt("Your name:");
+        comm = window.prompt("Add comment!");        
+        comm = name + ": " + comm;
         check = "show_com" + (clicked_id - 100);
         s_comm = getSavedValueComments(check);
         document.getElementById(check).innerHTML = s_comm + comm + "<br>";
